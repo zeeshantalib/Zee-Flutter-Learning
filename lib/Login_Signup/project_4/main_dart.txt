@@ -1,0 +1,21 @@
+
+class MyApp extends StatelessWidget {
+  //const MyApp({Key? key}) : super(key: key);
+  final routes = <String, WidgetBuilder>{
+    LoginPage.tag: (context) => LoginPage(),
+    HomePage.tag: (context) => HomePage(),
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Zee Login UI',
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+      ),
+      home: LoginPage(),
+      routes: routes,
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
