@@ -4,12 +4,16 @@ import '/Login_Signup/project_5/theme.dart';
 class CustomPrimaryButton extends StatelessWidget {
   //const CustomPrimaryButton({Key? key}) : super(key: key);
 
-  final Color buttonColor;
-  final String textValue;
-  final Color textColor;
+  late Color buttonColor;
+  late String textValue;
+  late Color textColor;
 
-  const CustomPrimaryButton(
-      {this.buttonColor, this.textValue = '', this.textColor});
+  CustomPrimaryButton(
+      {Key? key,
+      required this.buttonColor,
+      this.textValue = '',
+      required this.textColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
